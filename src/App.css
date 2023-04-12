@@ -1,3 +1,39 @@
+.menu li{
+	display: inline-block;
+	padding: 10px;
+	margin: 5px;
+	border: 2px solid black;
+	font-weight: bold;
+}
+.menu li:hover{
+	background-color: #61dafb;
+	cursor: pointer;
+}
+
+.menu li a{
+	text-decoration: none;
+	height: 100%;
+	width: 100%;
+}
+main{
+	float: left;
+	width: 70%;
+	height: 100%;
+	overflow: auto;
+}
+aside{
+	float: right;
+	width: 30%;
+}
+.sidebar,.content,.footer{
+	padding: 10px;
+	border: 2px solid;
+	margin: 5px;
+}
+footer{
+	clear: both;
+}
+
 .App {
   text-align: center;
 }
