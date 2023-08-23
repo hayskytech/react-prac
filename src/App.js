@@ -1,34 +1,35 @@
-import './App.css';
+import React from 'react'
 
-function App() {
+import Students from './students/Students'
+import Menu from './components/Menu'
+import Voting from './students/Voting'
+import Layout from './Layout'
+import Home from './components/Home'
+import About from './components/About'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Farook from './components/Farook'
+import Contact from './components/Contact'
+import 'semantic-ui-css/semantic.min.css'
+
+export default function App() {
+
+	const items = ['Home', 'About']
+
 	return (
-		<>
-			<div className="header">
-				<h1>Hello world</h1>
-				<nav className="menu">
-					<li>Home</li>
-					<li>About</li>
-					<li>Contact</li>
-					<li>Services</li>
-				</nav>
-			</div>
-			<aside>
-				<div className="sidebar">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus commodi quo, ea qui obcaecati eveniet animi vitae assumenda blanditiis nulla repellendus, eum, necessitatibus corrupti ratione odio veritatis! Quis, blanditiis tenetur quas consequatur corporis eius voluptatibus libero corrupti obcaecati error minima aut earum molestias dicta modi veritatis! At, maiores? Unde, omnis!
-				</div>
-			</aside>
-			<main>
-				<div className="content">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem sint iste deserunt sequi saepe pariatur unde voluptatum, reiciendis animi obcaecati aliquam magnam sapiente similique vitae culpa commodi architecto iusto omnis eius maxime placeat! Voluptatibus, eos?
-				</div>
-			</main>
-			<footer>
-				<div className="footer">
-					Copyrights (c) 2022 All rights reserved.
-				</div>
-			</footer>
-		</>
-	);
-}
+		<div>
 
-export default App;
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route index element={<Home />} />
+						<Route path="about" element={<About />} />
+						<Route path="contact" element={<Contact />} />
+						<Route path="Farook" element={<Farook />} />
+						{/* <Route path="*" element={<NoPage />} /> */}
+					</Route>
+				</Routes>
+			</BrowserRouter>
+
+		</div>
+	)
+}
