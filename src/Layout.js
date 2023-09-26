@@ -19,6 +19,7 @@ export default function Layout() {
 				<Menu.Item><Link to='/about'> <Icon name='user' /> About</Link></Menu.Item>
 				<Menu.Item><Link to='/contact'><Icon name='handshake outline' />Contact</Link></Menu.Item>
 				<Menu.Item><Link to='/farook'><Icon name='globe' /> Farook</Link></Menu.Item>
+				<Menu.Item><Link to='/Todolist'><Icon name='list' /> Todolist </Link></Menu.Item>
 
 			</Menu>
 

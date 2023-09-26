@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
+// this file demonstrates prop types and default values
 
 export default function Newbar(props) {
 	return (

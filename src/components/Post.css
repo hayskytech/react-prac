@@ -1,0 +1,27 @@
+.newsgrid {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+.newsgrid div {
+	border: 2px solid;
+	padding: 15px;
+	width: 15%;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: space-around;
+}
+
+.newsgrid h2,
+.newsgrid h3 {
+	margin: 0;
+}
+
+.newsgrid h2{
+	font-size: 17px;
+}
