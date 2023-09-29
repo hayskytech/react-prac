@@ -32,6 +32,8 @@ function OTPLogin(p) {
       .then(() => {
         setUser(null);
         p.setUser(null);
+        showPhone(true)
+        showOTP(false)
       })
       .catch((error) => {
         console.log('Logout error:', error);
