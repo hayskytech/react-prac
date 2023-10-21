@@ -11,8 +11,8 @@ const Notification = () => {
         <p><b>{notification?.title}</b></p>
         <p>{notification?.body}</p>
       </div>
-    );
-  };
+    )
+  }
 
   useEffect(() => {
     if (notification?.title) {
