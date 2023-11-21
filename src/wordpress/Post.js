@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Post.css'
-export default function Person() {
+export default function Post() {
 
 	const [data, setData] = useState(null);
 	useEffect(() => {

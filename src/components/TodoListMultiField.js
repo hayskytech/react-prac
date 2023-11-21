@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function TodoListMultiField() {
   const [list, setlist] = useState([])
-  
+
   function additem(e) {
     e.preventDefault()
     const formData = new FormData(e.target)
@@ -31,7 +31,7 @@ export default function TodoListMultiField() {
 
         <input type="submit" value="Submit" />
       </form>
-      <progress value={0.9}/>
+      <h2>TodoList Multi Field</h2>
       <table className='ui blue collapsing unstackable table'>
         <thead>
           <tr>

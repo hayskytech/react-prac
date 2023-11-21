@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 
-function TodoList() {
+export default function TodoListLocal() {
 	const inputRef = useRef(null);
 	const [list, setList] = useState([])
 	const [item, setItem] = useState('')
@@ -42,11 +42,11 @@ function TodoList() {
 			<input type="text" value={item} placeholder='write something' autoFocus onChange={handleItem} onKeyDown={handleKeydown} ref={inputRef} />
 			<button onClick={addItem}>ADD ITEM</button>
 
-			{list.map((i, index) => (
-				<li key={index}>{i} <button onClick={removeitem} data-index={index}>x</button></li>
-			))}
+			<ol>
+				{list.map((i, index) => (
+					<li key={index}>{i} <button onClick={removeitem} data-index={index}>x</button></li>
+				))}
+			</ol>
 		</>
 	)
 }
-
-export default TodoList

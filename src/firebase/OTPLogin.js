@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, signOut, RecaptchaVerifier, signInWithPhoneNumber, onAuthStateChanged, onIdTokenChanged } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth } from './firebase';
 
 function OTPLogin(p) {
   const [phone, setPhone] = useState(918498000172)

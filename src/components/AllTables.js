@@ -1,5 +1,5 @@
 import React from 'react'
-function AllTables() {
+export default function AllTables() {
 	const styles = {
 		tables: {
 			display: 'flex',
@@ -27,20 +27,20 @@ function AllTables() {
 
 		let table = []
 		for (let b = 1; b <= y; b++) {
-			table.push(	<tr key={b}><td>{a} x {b} = {a * b}</td></tr>	)
+			table.push(<tr key={b}><td>{a} x {b} = {a * b}</td></tr>)
 		}
 		alltables.push(<table key={a} style={styles.table}>
 			<thead>{table}
 			</thead>
-			</table>
-			)
+		</table>
+		)
 	}
 
 	return (
 		<div>
-			Tables: <input type="number" value={x} onChange={handlex} />
+			Tables: <input type="number" value={x} min={1} max={100} onChange={handlex} />
 			<br /><br />
-			Rows: <input type="number" value={y} onChange={handley} />
+			Rows: <input type="number" value={y} onChange={handley} min={1} max={100} />
 			<br />
 			<div style={styles.tables}>
 				{alltables}
@@ -48,4 +48,3 @@ function AllTables() {
 		</div>
 	)
 }
-export default AllTables
